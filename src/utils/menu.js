@@ -3,12 +3,12 @@ const menu = async () => {
   const hamburger = await document.getElementById('hamburger');
   
   hamburger.addEventListener('click', e => {
-    menu.classList.toggle('spread');
+    menu.classList.add('spread');
   });
   
   window.addEventListener('click', e => {
     if (e.target != menu && e.target != hamburger) {
-      menu.classList.toggle('spread');
+      menu.classList.remove('spread');
     }
   })
 }

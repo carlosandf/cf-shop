@@ -4,8 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  width: 100vw
-  font-family: 'Roboto';
+  font-family: 'Ubuntu', sans-serif;
   color: #555;
 }
 

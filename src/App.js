@@ -1,8 +1,7 @@
 import Header from './templates/Header.js';
 import Product from './templates/Product.js';
 
-
-async function App(data) {
+function App(data) {
   
   return (
     `

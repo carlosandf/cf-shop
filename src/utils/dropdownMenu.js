@@ -1,6 +1,6 @@
-const menu = async () => {
-  const menu = await document.getElementById('menu-mobile');
-  const hamburger = await document.getElementById('hamburger');
+const dropdownMenu = () => {
+  const menu = document.getElementById('menu-mobile');
+  const hamburger = document.getElementById('hamburger');
   
   hamburger.addEventListener('click', e => {
     menu.classList.add('spread');
@@ -12,4 +12,4 @@ const menu = async () => {
     }
   })
 }
-export default menu;
+export default dropdownMenu;

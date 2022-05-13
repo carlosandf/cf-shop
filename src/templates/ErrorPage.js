@@ -6,7 +6,7 @@ function ErrorPage() {
     <div>
       ${Header()}
       <div class="error-page">
-        <p><i>Tiempo de carga agotado:(</i></p>
+        <p><i>Ups! Algo Salió Mal :(</i></p>
       </div>
     </div>
     `

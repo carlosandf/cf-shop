@@ -118,8 +118,8 @@ li:hover, li:focus {
 .error-page p {
   font-weight: bolder;
   font-size: 50px;
-  padding: 20px;
-  text-align: justify;
+  padding: 30px;
+  text-align: center;
 }
 
 @media(max-width: 500px) {

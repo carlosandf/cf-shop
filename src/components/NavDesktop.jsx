@@ -1,7 +1,8 @@
-function navDesktop() {
+import React from 'react';
+
+function NavDesktop() {
   return (
-    `
-    <nav class="navbar">
+    <nav className="navbar">
       <ul>
         <li>Home</li>
         <li>Products</li>
@@ -9,7 +10,6 @@ function navDesktop() {
         <li>About</li>
       </ul>
     </nav>
-    `
   );
 }
-export default navDesktop;
+export default NavDesktop;

@@ -1,10 +1,12 @@
 const getData = async (API) => {
-  const response = await fetch(API);
-  const data = await response.json();
-  
-  const dataRes = data.slice(18,39);
-
-  return dataRes;
+  try {
+    const response = await fetch(API);
+    const data = await response.json();
+    const dataRes = data.slice(18,39);
+    return dataRes;
+  } catch (err) {
+    console.error(err);
+  }
 }
 
 export default getData;

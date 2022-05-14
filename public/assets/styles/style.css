@@ -40,6 +40,7 @@ header {
 }
 li:hover, li:focus {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .navbar-mobile {

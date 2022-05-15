@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -8,9 +10,9 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/'
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name].[contenthash].js",
+    clean: true,
   },
 
   resolve: {
@@ -56,8 +58,8 @@ module.exports = {
             options: {
               name: 'images/[hash].[name].[ext]',
             }
-          }
-        ]
+          },
+        ],
       }
     ]
   },
@@ -65,10 +67,18 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      filename: 'index.html'
+      filename: './index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css'
+      filename: './styles/[contenthash].css'
     }),
-  ]
+  ],
+
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new CssMinimizerPlugin(),
+      new TerserPlugin(),
+    ]
+  }
 }

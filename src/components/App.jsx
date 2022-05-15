@@ -2,6 +2,8 @@ import React, { useEffect, useState}  from 'react';
 import Header from '@components/Header';
 import Product from '@components/Product';
 import getData from '@utils/getData.js';
+import ErrorPage from '@components/ErrorPage';
+import '@styles/App.css';
 
 const API = 'https://api.escuelajs.co/api/v1/products';
 
@@ -17,13 +19,20 @@ function App() {
     })();
   }, []);
   
+  let result;
+  if(Array.isArray(products)){
+    result = <Product products={products} />
+  } else {
+    result = products;
+  }
+
   return (
-    <div>
+    <>
       <Header />
-      <div className="app">
-        <Product products={products} />
+      <div className="products-container">
+        {result}
       </div>
-    </div>
+    </>
   );
 }
 export default App;

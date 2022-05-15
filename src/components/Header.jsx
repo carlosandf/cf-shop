@@ -2,11 +2,11 @@ import React from 'react';
 import NavDesktop from './NavDesktop';
 import NavMobile from './NavMobile';
 import hamburger from '@icons/hamburger.svg';
-import '@styles/style.css';
+import '@styles/Header.css';
 
 function Header() {
   return (
-    <header>
+    <header className='header'>
       <div id="logo" className="logo-container">
         <h1>CfShop</h1>
       </div>

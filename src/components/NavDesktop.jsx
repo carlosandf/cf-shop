@@ -1,14 +1,11 @@
 import React from 'react';
+import MenuNav from '@components/MenuNav';
+import '@styles/NavDesktop.css';
 
 function NavDesktop() {
   return (
-    <nav className="navbar">
-      <ul>
-        <li>Home</li>
-        <li>Products</li>
-        <li>Contact</li>
-        <li>About</li>
-      </ul>
+    <nav className="navbar-desktop">
+      <MenuNav type={'menu-desktop'} />
     </nav>
   );
 }

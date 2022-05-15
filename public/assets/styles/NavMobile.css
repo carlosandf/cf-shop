@@ -1,0 +1,27 @@
+@import './global.css';
+
+.navbar-mobile {
+  display: none;
+}
+
+@media(max-width: 600px) {
+  .navbar-mobile {
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: 0;
+    width: 60vw;
+    height: 100vh;
+    transition: transform .2s;
+    transform: translate(110%);
+    box-shadow: 0 0 10px rgba(10, 10, 10, .4);
+    background-color: var(--primary);
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .spread {
+    transform: translate(0);
+  }
+
+}

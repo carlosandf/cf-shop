@@ -1,5 +1,5 @@
 import React from 'react';
-import '@styles/style.css';
+import '@styles/Product.css';
 
 
 function Product(props) {
@@ -13,16 +13,18 @@ function Product(props) {
           <picture className="img-container">
             <img src={product.images[0]} alt={product.description} />
           </picture>
-          <section className="info">
-            <div className="info-description">
-              <p>{product.description}</p>
+          <div className='info-container'>
+            <section className="info--description">
+              <div className="info--description__copy">
+                <p>{product.description}</p>
+              </div>
+              <div className="info--description__price">
+                <p>${product.price}</p>
+              </div>
+            </section>
+            <div className="button-container">
+              <button>Comprar</button> 
             </div>
-            <div>
-              <h4>${product.price}</h4>
-            </div>
-          </section>
-          <div className="button-container">
-            <button>Comprar</button> 
           </div>
         </div>
       )

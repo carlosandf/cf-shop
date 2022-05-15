@@ -1,0 +1,7 @@
+@import './global.css';
+
+@media(max-width: 600px) {
+  .navbar-desktop {
+    display: none;
+  }
+}

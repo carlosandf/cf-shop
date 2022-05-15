@@ -1,0 +1,30 @@
+@import './global.css';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  background-color: var(--primary)
+}
+
+.hamburger {
+  display: none;
+}
+
+@media(max-width: 600px) {
+  .hamburger {
+    display: grid;
+    place-content: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(10, 10, 10, .4);
+  }
+  .hamburger img {
+    width: 100%;
+    filter: var(--svg-filter-primary);
+  }
+}

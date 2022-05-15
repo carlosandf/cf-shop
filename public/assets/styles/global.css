@@ -1,0 +1,24 @@
+:root {
+  --primary-font-color: #00000099;
+  --primary: lightblue;
+  --secundary-font-color: #ffffff;
+  --backgroun-primary: #ffffff;
+  --svg-filter-primary: invert(31%) sepia(3%) saturate(21%) hue-rotate(330deg) brightness(100%) contrast(91%);
+  --svg-filter-secundary: invert(100%) sepia(100%) saturate(0%) hue-rotate(317deg) brightness(102%) contrast(103%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: var(--primary-font-color);
+}
+
+li:hover, li:focus {
+  text-decoration: underline;
+  cursor: pointer;
+}

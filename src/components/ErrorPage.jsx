@@ -1,15 +1,12 @@
 import React from 'react';
-import Header from '@components/Header.jsx';
+import '@styles/ErrorPage.css';
 
 function ErrorPage() {
   return (
-    <div>
-      <Header />
       <div class="error-page">
-        <p><i>Ups! Algo Salió Mal :(</i></p>
+        <p><i>Ups! Algo Salió Mal :&#40; <br /><br /> intenta mas tarde</i></p>
       </div>
-    </div>
-  )
+  );
 }
 
 export default ErrorPage;

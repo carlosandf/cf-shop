@@ -10,19 +10,18 @@ function App() {
 
   const [products,  setProducts] = useState([]);
 
-  useEffect( () => {
-    async function fetchData() {
+  useEffect(() => {
+    (async function () {
       const data = await getData(API); 
       setProducts(data);
-    }
-    fetchData()
+    })();
   }, []);
   
   return (
     <div>
       <Header />
       <div className="app">
-            <Product images={products[0].images[0]} description={products[0].description} price={products[0].price} />
+        <Product products={products} />
       </div>
     </div>
   );

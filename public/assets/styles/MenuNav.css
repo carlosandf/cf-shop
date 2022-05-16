@@ -17,9 +17,11 @@
 .menu-desktop a {
   color: var(--primary-font-color);
 }
+.menu-desktop li {
+  margin-left: 30px;
+}
 
 li {
-  margin-left: 30px;
   list-style: none;
   font-size: 18px;
 }

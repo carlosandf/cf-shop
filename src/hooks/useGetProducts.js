@@ -8,5 +8,6 @@ const useGetProducts = (API) => {
     const data = await getData(API);
     setProducts(data);
   }, []);
+  return products;
 }
 export default useGetProducts;

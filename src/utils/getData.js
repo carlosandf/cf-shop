@@ -1,6 +1,3 @@
-import React from 'react';
-import ErrorPage from '@components/ErrorPage';
-
 const getData = async (API) => {
   try {
     const response = await fetch(API);
@@ -9,7 +6,7 @@ const getData = async (API) => {
     return dataRes;
   } catch (err) {
     console.error(err);
-    return <ErrorPage />
+    return undefined;
   }
 }
 
